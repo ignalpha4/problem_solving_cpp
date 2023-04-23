@@ -15,9 +15,6 @@ Example 1:
 Input: x = 123
 Output: 321
 
-*/
-
-/*
 
 This will work for first condition but will give error for second conditon
 that is :If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
@@ -44,6 +41,7 @@ class Solution
 public:
     int reverse(int x)
     {
+        
         int y = 0;
         while (x != 0)
         {
