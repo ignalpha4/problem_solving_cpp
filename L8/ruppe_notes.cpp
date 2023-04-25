@@ -9,6 +9,7 @@ int main()
     cin >> amount;
 
     int n100 = 0, n50 = 0, n20 = 0, n1 = 0;
+
     switch (amount >= 100)
     {
     case 1:
