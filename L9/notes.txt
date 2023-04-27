@@ -1,0 +1,8 @@
+
+#NOTE:
+
+when we pass array to a function it doesn't create a copy as it does with variables(pass by value)
+when we pass array we actually send the starting memory location of the array to the function
+so if we update the array in function the actual elements in the original array will also get updated
+if cannot understand by reading watch the video
+
