@@ -41,13 +41,14 @@ class Solution
 public:
     int reverse(int x)
     {
-        
+
         int y = 0;
         while (x != 0)
         {
             int temp = x % 10;
 
-            if (y > (INT_MAX / 10) || y < (INT_MIN / 10)) // if value of ans is outside range
+            if (y > (INT_MAX / 10) || y < (INT_MIN / 10)) // if value of ans is outside range that is if we multiply number which is big by 10 then
+            // it will go out of range on int so we chech if y is greater than that number if so then we will return 0 or else we can calculate the ans
             {
                 return 0;
             }
