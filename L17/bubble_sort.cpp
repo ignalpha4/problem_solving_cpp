@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+// in bubble sory we compare two adjacent elements and swap if first element is larger than second this takes the largest element to the last
 
 /*bubble sort without optimization  tc=O(n2)*/
 /*
@@ -35,6 +36,7 @@ void bubbleSort(int arr[], int n)
 // more optimized code
 // here at first round no sapd takes place then the elements will be a<b b<c c<d and so on in such condition only there will be no swaps
 // after looking at above conditionwe can say that array is already sorted in that case only there will be no swaps therefore we will break the loop after first iteration of j
+// deu to this best case time complexity will be O(n)
 void bubbleSort(int arr[], int n)
 {
     bool swapped = false; // to check if swap has taken place or not
