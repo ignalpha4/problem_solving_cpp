@@ -45,3 +45,5 @@ int main()
 // best case o(n)
 // worst caseo(n2)
 // space o(1)
+
+// merge sort we will learn after recursion
