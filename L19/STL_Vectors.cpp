@@ -2,7 +2,6 @@
 #include <vector>
 using namespace std;
 
-
 int main()
 {
 
@@ -29,7 +28,7 @@ int main()
 
     cout << "Capacity: " << v.capacity() << endl;
 
-    // whenerver we add elements in vector if its more than its capacity it will double its capacity
+    // whenever we add elements in vector if its more than its capacity it will double its capacity
 
     // size will be the number of elements present in vector
 
