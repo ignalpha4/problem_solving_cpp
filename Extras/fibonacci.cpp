@@ -2,6 +2,8 @@
 using namespace std;
 
 // fibonnaci series till n numbers
+// 0,1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89,
+// 0 1  2  3  4  5  6  7   8   9   10
 
 void fib(int n)
 {
@@ -12,14 +14,14 @@ void fib(int n)
         cout << a << endl;
     }
 
-    for (int i = 2; i <= n; i++)
+    for (int i = 1; i < n; i++)
     {
+
         ans = a + b;
         a = b;
         b = ans;
     }
-
-    cout << b << endl; // why b find out :)
+    cout << b << endl;
 }
 
 int main()
