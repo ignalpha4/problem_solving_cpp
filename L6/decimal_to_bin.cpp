@@ -49,16 +49,16 @@ int main()
 */
 
     // method 2 : using bitwise & and right shift
-    // Note:use float will not work for int
 
     int n;
     cin >> n;
 
-    float ans = 0;
-    float i = 0;
+    int ans = 0;
+    int i = 0;
     while (n != 0)
     {
-        float bit = n & 1;
+        int bit = n & 1; // or we can use n%2
+
         ans = (bit * pow(10, i)) + ans; // this will store the bits in reverse flow
         n = n >> 1;
         i++;
