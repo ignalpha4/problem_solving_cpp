@@ -72,11 +72,12 @@ int main()
 Formulas:
 
 1) Same Flow
-i/p:123  o/p:123
+i/p:110  o/p:110
+
 ans=(ans*10)+digit
 
 2) reverse flow
-i/p:123 o/p:321
+i/p:110 o/p:011
 ans=(digit*pow(10,i))+ans
 
 */

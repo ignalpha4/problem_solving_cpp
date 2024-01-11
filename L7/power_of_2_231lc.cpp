@@ -25,6 +25,8 @@ public:
 
 
 */
+// This is the solution of lecture 7
+// this is optimized code
 
 /*
 class Solution
@@ -33,14 +35,18 @@ public:
     bool isPowerOfTwo(int n)
     {
         int ans = 1;
-        for (int i = 0; i <= 30; i++)
+        for (int i = 1; i <= 31; i++)
         {
             if (ans == n)
             {
                 return true;
             }
+        //we added this so that when we have value which will be false for eg 3 then the loop
+        //will run till 31 then in ans we will get 2^31 * 2 which will give value greater than the suze of integer
+        //for that reason we used this check.
 
             if (ans < INT_MAX / 2)
+
                 ans = ans * 2;
         }
 
@@ -49,8 +55,8 @@ public:
 };
 
 */
-
-// this approach is explained in arrays video
+//-------------------------------------------------------------------------------
+// This approach is explained in arrays video (another video)
 // in this approach if the binary representation of number contains only single 1 then it is in power of 2
 //  as the binary numbers are represented in the power of 2 form only (to understand watch lect 9 time: 1:04:00)
 class Solution

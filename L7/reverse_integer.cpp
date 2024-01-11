@@ -70,3 +70,23 @@ int main()
 
     return 0;
 }
+
+/*
+Formulas:
+
+1) Reverse
+
+i/p:123  o/p:321
+
+ans=(ans*10)+digit
+
+2) same flow
+
+i/p:123  o/p:123
+
+ans=(digit*pow(10,i))+ans
+
+
+in integer the same flow doesnt make any sense
+
+*/

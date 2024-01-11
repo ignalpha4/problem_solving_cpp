@@ -18,7 +18,8 @@ int main()
             ans = ans + pow(2, i); // if 1 then add the 2^i to ans
         }
         n = n / 10; // to remove last element for eg 101 o/p 10
-        i++;        // to keep track of raise to power
+
+        i++; // to keep track of raise to power
     }
 
     cout << ans << endl;
