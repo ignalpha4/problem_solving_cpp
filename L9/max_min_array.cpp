@@ -18,7 +18,7 @@ int getMax(int arr[], int N)
 
     for (int i = 0; i < N; i++)
     {
-        if (arr[i] > max)
+        if (arr[i] > max) // or we can do ans =max(ans,arr[i]);
         {
             max = arr[i];
         }

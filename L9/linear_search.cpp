@@ -1,44 +1,43 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-bool linearSearch(int arr[], int n, int key)
+void reverse_array(int arr[], int n)
 {
+    int temp = 0;
+    int i = 0;
+    int j = n - 1;
 
-    for (int i = 0; i < n; i++)
+    while (i < j)
     {
-        if (arr[i] == key)
-        {
-            return true;
-        }
+        temp = arr[j];
+        arr[j] = arr[i];
+        arr[i] = temp;
+        i++;
+        j--;
     }
 
-    return false;
+    // printing array
+
+    cout << "reversed array is : ";
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
 }
 
 int main()
 {
 
-    int n;
-    cin >> n;
-    int arr[n];
+    int arr[5] = {45, 7, 5, 2, 13};
 
-    for (int i = 0; i < n; i++)
+    cout << "initial array is : ";
+    for (int i = 0; i < 5; i++)
     {
-        cin >> arr[i];
+        cout << arr[i] << " ";
     }
+    cout << endl;
 
-    cout << "Enter element to search" << endl;
-    int key;
-    cin >> key;
-
-    if (linearSearch(arr, n, key))
-    {
-        cout << "present" << endl;
-    }
-    else
-    {
-        cout << "not present" << endl;
-    }
+    reverse_array(arr, 5);
 
     return 0;
 }
