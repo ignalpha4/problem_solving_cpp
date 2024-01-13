@@ -26,7 +26,7 @@ public:
             i = i + cnt;
         }
         sort(ans.begin(), ans.end());
-        for (int i = 0; i < ans.size() - 1; i++)
+        for (int i = 0; i < ans.size() - 1; i++)   ////n-1 bcoz we are checking for i+1 index
         {
             if (ans[i] == ans[i + 1])
                 return false;

@@ -30,6 +30,10 @@ int main()
         }
 
         int ans = 0;
+
+        // when we xor with same number we get 0 and when we xor with 0 we get same element
+        // using this property we will solve this question
+
         for (int i = 0; i < n; i++)
         {
             ans = ans ^ arr[i];

@@ -1,23 +1,31 @@
-// this is the temporary code to test
-
 #include <bits/stdc++.h>
 using namespace std;
 
 int main()
 {
-    int x;
-    cin >> x;
-
-    int ans = 0;
-
-    while (x != 0)
+    int t;
+    cin >> t;
+    while (t--)
     {
-        int digit = x % 10;
-        ans = (ans * 10) + digit;
-        x = x / 10;
+        int a1, a2, a3, b1, b2, b3;
+        cin >> a1 >> a2 >> a3 >> b1 >> b2 >> b3;
+
+        int alice_score = min(min(a1, a2), a3) - (a1 + a2 + a3);
+
+        int bob_score = min(min(b1, b2), b3) - (b1 + b2 + b3);
+
+        if (alice_score > bob_score)
+        {
+            cout << "Alice" << endl;
+        }
+        else if (bob_score > alice_score)
+        {
+            cout << "Bob" << endl;
+        }
+        else
+        {
+            cout << "Tie" << endl;
+        }
     }
-
-    cout << "reverse is :" << ans << endl;
-
     return 0;
 }

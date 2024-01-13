@@ -13,7 +13,7 @@ void swaplAlternate(int arr[], int n)
 {
     for (int i = 0; i < n; i += 2) // i=i+2 as we are swapping the alternate
     {
-        if ((i + 1) < n)
+        if ((i + 1) < n) // for odd number of elements ,the i+1 goes out of size
         {
             swap(arr[i], arr[i + 1]);
         }
