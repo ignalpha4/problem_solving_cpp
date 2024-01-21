@@ -10,8 +10,10 @@ vector<vector<int>> findTriplets(vector<int>arr, int n, int K) {
 
     for(int i=0;i<n-2;i++)
     {
-        if (i > 0 && arr[i] == arr[i-1]) continue;
-
+        if (i > 0 && arr[i] == arr[i-1]) continue; //this is necessary so that repeat should not be possible
+        //if for 10 5 5 5 2 we get  10 '5' '5' 5 '2'=12 but when we increment bu i still we get same ans 
+        //  ie 10 5 '5' '5' '2' this will also print the same combination so to solve this we add this condition.
+        // here' ' denotes that these numbers are considered for sum
         for(int j=i+1;j<n-1;j++)
         {
             if (j > i+1 && arr[j] == arr[j-1]) continue;

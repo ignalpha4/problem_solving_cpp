@@ -1,38 +1,61 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void swap_alternate(int arr[], int n)
+int binary_search(int arr[], int key, int n)
 {
+    int s = 0;
+    int e = n - 1;
 
-    for (int i = 0; i < n; i += 2)
+    int mid = (s + e) / 2;
+
+    while (s <= e)
     {
-        if (i + 1 < n)
+
+        if (arr[mid] == key)
         {
-            swap(arr[i], arr[i + 1]);
+            return mid;
         }
+
+        if (arr[mid] < key)
+        {
+            s = mid + 1;
+        }
+        if (arr[mid] > key)
+        {
+            e = mid - 1;
+        }
+        mid = (s + e) / 2;
     }
 
-    for (int i = 0; i < n; i++)
-    {
-        cout << arr[i] << " ";
-    }
+    return -1;
 }
 
 int main()
 {
+    int n;
+    cin >> n;
 
-    int arr[10] = {4, 5, -14, 23, 67, -98, 432, 421, 23};
+    int arr[n];
 
-    cout << "Before swap:" << endl;
-    for (int i = 0; i < 9; i++)
+    for (int i = 0; i < n; i++)
     {
-        cout << arr[i] << " ";
+        cin >> arr[i];
     }
-    cout << endl;
+    int key;
 
-    cout << "after swap" << endl;
+    cout << "Enter key to search : " << endl;
+    cin >> key;
 
-    swap_alternate(arr, 9);
+    int answer = binary_search(arr, key, n);
+
+    if (answer == -1)
+    {
+        cout << "Element not found" << endl;
+    }
+    else
+    {
+        cout << "Element found at index :" << answer << endl;
+    }
 
     return 0;
 }
